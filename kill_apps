@@ -67,7 +67,7 @@ do
 						echo "Terminated"
 
 					else
-						echo "Your program didn't exist !!"
+						echo "Your program doesn't exist !!"
 					fi
 
 				
