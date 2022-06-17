@@ -38,8 +38,7 @@ $ sudo rm /usr/bin/ancien_name_of_kill_apps
 # Rename the script
 $ python3 rename.py
 
-# Create a new command
-# Don't forget it !!
+# Create a new command, don't forget it
 $ sudo cp new_name_of_kill_apps /usr/bin/
 
 ```
