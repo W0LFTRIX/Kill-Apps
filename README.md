@@ -25,9 +25,19 @@ $ ./kill_apps
 
 ```
 
-# Help 
-<img src="https://raw.githubusercontent.com/Wolftrix2514/Blake2bD/main/Help/help.png" />
+# Integration into your system
+```console
+# Make a command (fist time)
+$ sudo cp kill_apps /usr/bin/
+
+# Change name of the command
+$ rm /usr/bin/ancien_name_of_kill_apps
+
+$ python3 rename.py
+
+$ sudo cp new_name_of_kill_apps /usr/bin/
+
+```
  
- Here put your file and the program will encrypt all your file 
  
  That's it :) !!!
