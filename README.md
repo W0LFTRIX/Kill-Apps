@@ -21,12 +21,14 @@ $ chmod +x kill_apps
 $ python3 rename.py
 
 # Lauch for the first time the script
-$ ./kill_apps
+# Remplace "kill_apps" by the name you gave it with rename.py
+$ ./kill_apps 
 ```
 
 # Integration into your system
 ```
 # Make a command (fist time)
+# Remplace "kill_apps" by the name you gave it with rename.py
 $ sudo cp kill_apps /usr/bin/
 
 # Change name of the command
