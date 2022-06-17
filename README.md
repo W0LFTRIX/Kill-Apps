@@ -22,7 +22,6 @@ $ python3 rename.py
 
 # Lauch for the first time the script
 $ ./kill_apps
-
 ```
 
 # Integration into your system
@@ -36,7 +35,6 @@ $ rm /usr/bin/ancien_name_of_kill_apps
 $ python3 rename.py
 
 $ sudo cp new_name_of_kill_apps /usr/bin/
-
 ```
  
  
