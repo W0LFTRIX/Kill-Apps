@@ -18,6 +18,7 @@ $ chmod +x kill_apps
 
 ``` 
 # Optional (Launch the python file for change the program name)
+# !!! Important, change the name of the program with rename.py else you will just rename the file name
 $ python3 rename.py
 
 # Lauch for the first time the script
@@ -32,7 +33,7 @@ $ ./kill_apps
 $ sudo cp kill_apps /usr/bin/
 
 # Change name of the command
-$ rm /usr/bin/ancien_name_of_kill_apps
+$ sudo rm /usr/bin/ancien_name_of_kill_apps
 
 $ python3 rename.py
 
