@@ -42,6 +42,6 @@ $ python3 rename.py
 $ sudo cp new_name_of_kill_apps /usr/bin/
 
 ```
-Ps : Once you have created the command, you will be able to launch it like any other command on your terminal 
+Ps : Once you have created the command, you will be able to launch it, like any other command on your terminal 
  
  That's it :) !!!
