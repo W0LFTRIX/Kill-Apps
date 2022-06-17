@@ -16,7 +16,7 @@ $ chmod +x kill_apps
 
 # Usage
 
-``` console
+``` 
 # Optional (Launch the python file for change the program name)
 $ python3 rename.py
 
@@ -26,7 +26,7 @@ $ ./kill_apps
 ```
 
 # Integration into your system
-```console
+```
 # Make a command (fist time)
 $ sudo cp kill_apps /usr/bin/
 
