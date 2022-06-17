@@ -3,7 +3,7 @@ This script is used to kill apps by terminal on linux
 
 
 # Installation
-``` console
+``` 
 # Clone the repository
 $ git clone https://github.com/Wolftrix2514/Kill-Apps.git
 
