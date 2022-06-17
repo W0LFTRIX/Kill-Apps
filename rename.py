@@ -7,7 +7,7 @@ new_name = input("Enter the new name for this script : ")
 file = []
 
 for x in os.listdir() :
-	if x == "rename.py" or x == "README.md" or x == "LICENSE" or x == "install.sh" :
+	if x == "rename.py" or x == "README.md" or x == "LICENSE" :
 		continue
 
 	else : 
