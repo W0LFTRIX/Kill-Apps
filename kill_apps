@@ -1,0 +1,78 @@
+#!/bin/bash
+
+
+name="kill_apps"
+
+if [ $# = 0 ]
+then
+	echo "$name: missing operand"
+	echo "Try '$name --help' for more information."
+
+fi
+
+
+
+help_message () {
+	echo "This script is used to kill apps
+
+Usage: $name [APP] [OPTION] 
+
+Options (Do not put anything behind these options.) : 
+  --version             Display version information.
+  -h, --help            Show this help message and exit
+"
+}
+
+
+while test $# -gt 0
+do
+    case "$1" in
+    	--help) # option 3
+			help_message
+			exit 0
+				;;
+		-h) # option 3
+			help_message
+			exit 0
+            ;;
+        --version) # option 4
+			echo "$name: 1.0.0"
+			echo "This project is create by Wolftrix"
+            ;;
+
+        -*) echo "$name: invalid option '$1'"
+			echo "Try '$name --help' for more information."
+            ;;
+        *) 
+			{ # try
+				ps aux | grep $1 > app_id.txt
+				line=$(head -n 1 app_id.txt)
+				rm app_id.txt
+
+				IFS=' ' read -ra id <<< "$line"
+				
+				element_number=0	
+				
+				for i in "${id[@]}"
+				do
+					((element_number+=1))
+					if [ $element_number = 2 ]
+					then
+						id=$i
+
+					fi
+				done
+
+				kill $id
+				echo "Terminated"
+				
+			} || { # catch
+				echo "Error"
+			}
+			;;
+    esac
+    shift
+done
+
+
+exit 0
