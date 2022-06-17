@@ -45,9 +45,7 @@ do
             ;;
         *) 
 			{ # try
-				ps aux | grep $1 > app_id.txt
-				line=$(head -n 1 app_id.txt)
-				rm app_id.txt
+				line=$(ps aux | grep -m 1 $1 | { grep -v $name || true; } | { grep -v grep || true; })
 
 				IFS=' ' read -ra id <<< "$line"
 				
@@ -63,8 +61,15 @@ do
 					fi
 				done
 
-				kill $id
-				echo "Terminated"
+				if [ "$id" != "" ]
+					then
+						kill $id
+						echo "Terminated"
+
+					else
+						echo "Your program didn't exist !!"
+					fi
+
 				
 			} || { # catch
 				echo "Error"
